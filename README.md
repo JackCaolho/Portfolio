@@ -13,6 +13,12 @@ Portfolio profissional estático publicado com GitHub Pages.
 
 ## Publicação
 
-O deploy está configurado em `.github/workflows/pages.yml`.
+Este site é estático e deve ser publicado pelo GitHub Pages direto da branch.
 
-No GitHub, habilite Pages em `Settings > Pages` e selecione `GitHub Actions` como fonte de publicação.
+No GitHub, vá em `Settings > Pages` e configure:
+
+- Source: `Deploy from a branch`
+- Branch: `main`
+- Folder: `/ (root)`
+
+Depois salve. A página será publicada a partir do `index.html` da raiz do repositório.
