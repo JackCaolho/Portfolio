@@ -4,20 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Gustavo Allify, Analista de BI, Data Analytics e Python Developer.">
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#071116">
   <title>Gustavo Allify | Data Analytics & BI</title>
   <link rel="icon" href="assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Voltar ao inicio">GA</a>
-    <nav class="nav" aria-label="Navegacao principal">
+    <a class="brand" href="#top" aria-label="Voltar ao início">GA</a>
+    <nav class="nav" aria-label="Navegação principal">
       <a href="#sobre">Sobre</a>
-      <a href="#experiencia">Experiencia</a>
+      <a href="#skills">Skills</a>
+      <a href="#experiencia">XP</a>
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -65,30 +66,58 @@
       </div>
     </section>
 
-    <section class="section">
+    <section id="skills" class="section">
       <div class="section-heading">
         <p class="section-label">Habilidades</p>
         <h2>Stack principal</h2>
       </div>
-      <div class="skills-grid" aria-label="Lista de habilidades">
-        <span>Python</span>
-        <span>Power BI</span>
-        <span>Tableau</span>
-        <span>SQL</span>
-        <span>ETL</span>
-        <span>APIs</span>
-        <span>Data Analysis</span>
-        <span>Machine Learning</span>
-        <span>AWS / Azure</span>
-        <span>HTML / CSS / JS</span>
-        <span>Big Data</span>
-        <span>Gestão</span>
+      <div class="skills-console" aria-label="Lista de habilidades com barras de progresso">
+        <div class="skillbar" style="--level: 98%">
+          <div class="skillbar__meta"><span>Python</span><strong>98%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 95%">
+          <div class="skillbar__meta"><span>Power BI / Tableau</span><strong>95%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 85%">
+          <div class="skillbar__meta"><span>SQL - Relational Database</span><strong>85%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 90%">
+          <div class="skillbar__meta"><span>Business Know How</span><strong>90%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 100%">
+          <div class="skillbar__meta"><span>Data Analysis</span><strong>100%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 40%">
+          <div class="skillbar__meta"><span>Machine Learning</span><strong>40%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 75%">
+          <div class="skillbar__meta"><span>Cloud - AWS / Azure</span><strong>75%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 70%">
+          <div class="skillbar__meta"><span>HTML / CSS / JavaScript</span><strong>70%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 45%">
+          <div class="skillbar__meta"><span>Big Data Architecture</span><strong>45%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
+        <div class="skillbar" style="--level: 70%">
+          <div class="skillbar__meta"><span>Liderança e Gestão</span><strong>70%</strong></div>
+          <div class="skillbar__track"><span></span></div>
+        </div>
       </div>
     </section>
 
     <section id="experiencia" class="section">
       <div class="section-heading">
-        <p class="section-label">Experiencia</p>
+        <p class="section-label">Experiência</p>
         <h2>Trajetória profissional</h2>
       </div>
       <div class="timeline">
@@ -174,7 +203,7 @@
             <h3>Uso de Redes Móveis com Big Data</h3>
             <p>Visualização geográfica de uso de redes móveis com filtros temporais e análise de padrões regionais.</p>
           </div>
-          <iframe title="Mapa de uso de redes moveis" src="projects/mapa.html"></iframe>
+          <iframe title="Mapa de uso de redes móveis" src="projects/mapa.html"></iframe>
         </article>
       </div>
     </section>
