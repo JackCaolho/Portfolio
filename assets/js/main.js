@@ -6,3 +6,9 @@ const toggleHeaderShadow = () => {
 
 window.addEventListener("scroll", toggleHeaderShadow, { passive: true });
 toggleHeaderShadow();
+
+document.querySelectorAll(".skills-bar-container .percent").forEach((percent, index) => {
+  window.setTimeout(() => {
+    percent.textContent = percent.dataset.percent;
+  }, 700 + index * 150);
+});
