@@ -111,7 +111,7 @@ document.querySelectorAll(".stat-item strong[data-count]").forEach((stat) => {
 });
 
 const particles = document.getElementById("particles");
-const symbols = ["{", "}", "[", "]", "<", "/>", "=", "SQL", "BI", "PY"];
+const symbols = ["SQL", "BI", "ETL", "KPI", "API", "DAX", "CSV", "DW", "SLA", "HOP"];
 
 if (particles) {
   for (let i = 0; i < 22; i += 1) {
