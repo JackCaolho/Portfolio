@@ -4,278 +4,357 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio de Gustavo Allify, Analista de BI, Data Analytics e Python Developer.">
-  <meta name="theme-color" content="#071116">
-  <title>Gustavo Allify | Data Analytics & BI</title>
+  <meta name="theme-color" content="#061019">
+  <title>Gustavo Allify | BI, Dados e Python</title>
   <link rel="icon" href="assets/images/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Voltar ao início">GA</a>
-    <nav class="nav" aria-label="Navegação principal">
-      <a href="#sobre">Sobre</a>
-      <a href="#skills">Skills</a>
-      <a href="#experiencia">XP</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
+  <div class="loader-screen" id="loader">
+    <div class="loader-content">
+      <div class="loader-code">
+        <span>const portfolio = {</span>
+        <span>&nbsp;&nbsp;nome: "Gustavo Allify",</span>
+        <span>&nbsp;&nbsp;status: "carregando dados"</span>
+        <span>};</span>
+      </div>
+      <div class="loader-track"><span></span></div>
+      <strong id="loaderPercent">0%</strong>
+    </div>
+  </div>
+
+  <header class="main-header" id="header">
+    <nav class="nav-container">
+      <a class="brand-logo" href="#home" aria-label="Ir para o início">
+        <span>&lt;</span><strong>GA</strong><span>/&gt;</span>
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active" data-section="home"><i class="fa-solid fa-house"></i> Início</a>
+        <a href="#about" class="nav-link" data-section="about"><i class="fa-solid fa-user"></i> Sobre</a>
+        <a href="#skills" class="nav-link" data-section="skills"><i class="fa-solid fa-code"></i> Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience"><i class="fa-solid fa-briefcase"></i> Experiência</a>
+        <a href="#projects" class="nav-link" data-section="projects"><i class="fa-solid fa-rocket"></i> Projetos</a>
+        <a href="#contact" class="nav-link" data-section="contact"><i class="fa-solid fa-envelope"></i> Contato</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <img class="hero__image" src="assets/images/capa-portifolio5.jpg" alt="Capa abstrata com tema de tecnologia e dados">
-      <div class="hero__content">
-        <p class="eyebrow">Data Analytics | BI | Python</p>
-        <h1>Gustavo Allify</h1>
-        <p class="hero__lead">
-          Transformo dados, integrações e processos em dashboards, automações e análises que apoiam decisões de negócio.
-        </p>
-        <div class="hero__actions">
-          <a class="button button--primary" href="#projetos">Ver projetos</a>
-          <a class="button button--ghost" href="assets/files/gustavo-allify-curriculo.pdf" download>Baixar currículo</a>
+  <main class="main-content">
+    <section id="home" class="hero-section">
+      <div class="code-grid-bg"></div>
+      <div class="floating-particles" id="particles"></div>
+
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-greeting">
+            <span>Olá, eu sou</span>
+            <span class="greeting-cursor">|</span>
+          </div>
+
+          <h1 class="hero-name">
+            <span class="name-prefix">const</span>
+            <span class="name-variable">gustavo</span>
+            <span class="name-operator">=</span>
+            <span class="name-value">"Allify"</span>
+            <span class="name-suffix">;</span>
+          </h1>
+
+          <p class="hero-title">
+            <span>//</span> Analista de BI | Data Analytics | Python Developer
+          </p>
+
+          <p class="hero-description">
+            Crio dashboards, automações, integrações e análises para transformar dados complexos em decisões mais rápidas, visuais e confiáveis.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#projects">Ver projetos <i class="fa-solid fa-arrow-right"></i></a>
+            <a class="btn btn-secondary" href="assets/files/gustavo-allify-curriculo.pdf" download>Baixar currículo <i class="fa-solid fa-download"></i></a>
+          </div>
+
+          <div class="hero-social" aria-label="Links sociais">
+            <a href="https://github.com/JackCaolho" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/gustavo-allify/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="mailto:gustavoallify@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://wa.me/5511974877301?text=Ol%C3%A1%20Gustavo,%20vi%20seu%20portfolio%20e%20gostaria%20de%20conversar." target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+          <div class="profile-terminal">
+            <div class="terminal-bar">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="profile-frame">
+              <img src="assets/images/icon_perfil.jpg" alt="Foto de Gustavo Allify">
+            </div>
+            <div class="terminal-code">
+              <span><b>role</b>: "Analista de Dados Pleno"</span>
+              <span><b>stack</b>: ["Python", "SQL", "Power BI"]</span>
+              <span><b>focus</b>: "dados que viram ação"</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-1">
+            <i class="fa-solid fa-chart-line"></i>
+            <div><strong>BI</strong><span>Power BI, Tableau</span></div>
+          </div>
+          <div class="floating-badge badge-2">
+            <i class="fa-brands fa-python"></i>
+            <div><strong>Python</strong><span>ETL, APIs, automação</span></div>
+          </div>
+          <div class="floating-badge badge-3">
+            <i class="fa-solid fa-database"></i>
+            <div><strong>SQL</strong><span>Modelagem e análise</span></div>
+          </div>
         </div>
       </div>
-      <aside class="profile-card" aria-label="Resumo profissional">
-        <img src="assets/images/icon_perfil.jpg" alt="Foto de Gustavo Allify">
-        <div>
-          <strong>Analista de Dados Pleno</strong>
-          <span>Power BI, SQL, Python, ETL e automação</span>
+    </section>
+
+    <section id="about" class="section about-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2 class="section-title"><span>&lt;</span>Sobre mim<span>/&gt;</span></h2>
+          <div class="section-line"></div>
         </div>
-      </aside>
-    </section>
 
-    <section id="sobre" class="section section--split">
-      <div>
-        <p class="section-label">Sobre</p>
-        <h2>Dados claros para decisões melhores.</h2>
-      </div>
-      <div class="section-copy">
-        <p>
-          Sou especialista em análise de dados, machine learning aplicado, visualização e automação. Trabalho com Python, SQL,
-          JavaScript, Power BI, Tableau, APIs e bancos relacionais para transformar dados complexos em produtos analíticos
-          confiáveis e fáceis de usar.
-        </p>
-        <div class="stats">
-          <span><strong>BI</strong> Dashboards executivos</span>
-          <span><strong>ETL</strong> Pipelines e APIs</span>
-          <span><strong>Cloud</strong> VPS, AWS e Azure</span>
+        <div class="about-content">
+          <div class="about-text-wrapper card-panel">
+            <p>
+              Sou especialista em análise de dados, visualização, automação e integração entre sistemas. Minha rotina mistura entendimento de negócio, extração de dados, criação de pipelines, modelagem e dashboards que ajudam times a agir com clareza.
+            </p>
+            <p>
+              Tenho experiência com Python, SQL, Power BI, Tableau, APIs, Excel, bancos relacionais e infraestrutura VPS/cloud. Gosto de pegar processos confusos e transformar em fluxos mensuráveis, visuais e fáceis de operar.
+            </p>
+          </div>
+
+          <div class="about-stats">
+            <div class="stat-item">
+              <strong data-count="10">0</strong>
+              <span>Skills principais</span>
+            </div>
+            <div class="stat-item">
+              <strong data-count="3">0</strong>
+              <span>Áreas de atuação</span>
+            </div>
+            <div class="stat-item">
+              <strong data-count="100">0</strong>
+              <span>Foco em dados</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <div class="section-heading">
-        <p class="section-label">Habilidades</p>
-        <h2>Stack principal</h2>
-      </div>
-      <ul class="skills-bar-container" aria-label="Lista de habilidades com barras de progresso">
-        <li>
-          <div class="progressbar-title">
-            <h3>Python</h3>
-            <span class="percent" data-percent="98%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-cyan" style="--progress: 98%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Power BI / Tableau</h3>
-            <span class="percent" data-percent="95%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-blue" style="--progress: 95%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>SQL - Relational Database</h3>
-            <span class="percent" data-percent="85%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-purple" style="--progress: 85%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Business Know How</h3>
-            <span class="percent" data-percent="90%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-yellow" style="--progress: 90%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Data Analysis</h3>
-            <span class="percent" data-percent="100%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-green" style="--progress: 100%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Machine Learning</h3>
-            <span class="percent" data-percent="40%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-pink" style="--progress: 40%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Cloud - AWS / Azure</h3>
-            <span class="percent" data-percent="75%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-orange" style="--progress: 75%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>HTML / CSS / JavaScript</h3>
-            <span class="percent" data-percent="70%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-red" style="--progress: 70%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Big Data Architecture</h3>
-            <span class="percent" data-percent="45%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-purple" style="--progress: 45%"></span>
-          </div>
-        </li>
-        <li>
-          <div class="progressbar-title">
-            <h3>Liderança e Gestão</h3>
-            <span class="percent" data-percent="70%">0%</span>
-          </div>
-          <div class="bar-container">
-            <span class="progressbar progress-cyan" style="--progress: 70%"></span>
-          </div>
-        </li>
-      </ul>
-    </section>
+    <section id="skills" class="section skills-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2 class="section-title"><span>&lt;</span>Skills<span>/&gt;</span></h2>
+          <div class="section-line"></div>
+        </div>
 
-    <section id="experiencia" class="section">
-      <div class="section-heading">
-        <p class="section-label">Experiência</p>
-        <h2>Trajetória profissional</h2>
-      </div>
-      <div class="timeline">
-        <article>
-          <span>Atual</span>
-          <h3>Labormesp</h3>
-          <p>Analista de Dados Pleno</p>
-          <p>Dashboards em Power BI, integrações com APIs, extração de dados SQL e Excel, processos ETL em Python e manutenção de bancos relacionais.</p>
-        </article>
-        <article>
-          <span>2 anos</span>
-          <h3>SWINT - Inteligência e Investigação</h3>
-          <p>Analista de Inteligência / Risco</p>
-          <p>Análise crítica baseada em dados para prevenção de fraudes, cruzamento de bases, automações em Python e manutenção de bancos SQL via API.</p>
-        </article>
-        <article>
-          <span>1 ano</span>
-          <h3>Three Lives Restaurante</h3>
-          <p>Gerente de Restaurante</p>
-          <p>Gestão administrativa, fornecedores, estoque, fluxo de caixa, controles financeiros e apresentação de resultados.</p>
-        </article>
+        <div class="skills-grid">
+          <article class="skill-category">
+            <h3>Dados e BI</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-percent="100"><div class="skill-header"><span>Data Analysis</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="95"><div class="skill-header"><span>Power BI / Tableau</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="85"><div class="skill-header"><span>SQL</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+            </div>
+          </article>
+
+          <article class="skill-category">
+            <h3>Automação e Engenharia</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-percent="98"><div class="skill-header"><span>Python</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="75"><div class="skill-header"><span>Cloud - AWS / Azure</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="45"><div class="skill-header"><span>Big Data Architecture</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+            </div>
+          </article>
+
+          <article class="skill-category">
+            <h3>Produto e Negócio</h3>
+            <div class="skill-items">
+              <div class="skill-item" data-percent="90"><div class="skill-header"><span>Business Know How</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="70"><div class="skill-header"><span>HTML / CSS / JavaScript</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+              <div class="skill-item" data-percent="70"><div class="skill-header"><span>Liderança e Gestão</span><strong>0%</strong></div><div class="skill-bar"><span></span></div></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="projetos" class="section">
-      <div class="section-heading">
-        <p class="section-label">Projetos</p>
-        <h2>Power BI</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card">
-          <div class="project-card__copy">
-            <span>Dashboard</span>
-            <h3>Análise de Clínicas Médicas</h3>
-            <p>Comparação de performance entre unidades, tendências, previsão de volume, horários de pico e tipos de demanda.</p>
-          </div>
-          <iframe title="Agendamento" src="https://app.powerbi.com/view?r=eyJrIjoiZGIxYmM4NzUtNWNmMi00NDY2LThkZTYtMzA0NDU4NzM3M2ZkIiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe>
-        </article>
-        <article class="project-card">
-          <div class="project-card__copy">
-            <span>Dashboard</span>
-            <h3>Análise de NPL Empresarial</h3>
-            <p>Tendências de feedbacks, categorias recorrentes e fatores que influenciam avaliações positivas ou negativas.</p>
-          </div>
-          <iframe title="BI Challenge" src="https://app.powerbi.com/view?r=eyJrIjoiMmY2OGNmM2EtZDQ2Ny00NGE2LWJlYTAtZmE1YTgyYTllNDU2IiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe>
-        </article>
-        <article class="project-card">
-          <div class="project-card__copy">
-            <span>Dashboard</span>
-            <h3>Análise do Setor de Despachante</h3>
-            <p>Status, regiões, tipo de cliente, gargalos operacionais e tempo médio de conclusão por etapa.</p>
-          </div>
-          <iframe title="Power BI Despachante" src="https://app.powerbi.com/view?r=eyJrIjoiNzg0MTljYzEtZDFkNS00MzZlLWE5MzgtZDUzZjE0MTc4ODI5IiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe>
-        </article>
+    <section id="experience" class="section experience-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2 class="section-title"><span>&lt;</span>Experiência<span>/&gt;</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">Atual</span>
+              <h3>Analista de Dados Pleno</h3>
+              <strong>Labormesp</strong>
+              <p>Desenvolvimento de dashboards em Power BI, integrações via APIs, extração SQL/Excel, processos ETL em Python, bancos relacionais e gerenciamento de servidores VPS.</p>
+              <div class="tags"><span>Power BI</span><span>Python</span><span>SQL</span><span>ETL</span><span>APIs</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">2 anos</span>
+              <h3>Analista de Inteligência / Risco</h3>
+              <strong>SWINT - Inteligência e Investigação</strong>
+              <p>Análise crítica baseada em dados para prevenção de fraudes, cruzamento de bases, triangulação de informações, automações em Python e manutenção de bancos SQL via API.</p>
+              <div class="tags"><span>Fraude</span><span>Automação</span><span>Python</span><span>SQL</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-year">1 ano</span>
+              <h3>Gerente de Restaurante</h3>
+              <strong>Three Lives Restaurante</strong>
+              <p>Gestão administrativa, fornecedores, estoque, controle financeiro, fluxo de caixa e apresentação de resultados operacionais.</p>
+              <div class="tags"><span>Gestão</span><span>Financeiro</span><span>Operação</span></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-heading">
-        <p class="section-label">Outros projetos</p>
-        <h2>Produtos, dados e automação</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card project-card--video">
-          <div class="project-card__copy">
-            <span>Produto</span>
-            <h3>Sea Quest</h3>
-            <p>Plataforma gamificada para incentivar ações de limpeza, educação ambiental e conservação de praias e oceanos.</p>
-          </div>
-          <iframe title="Sea Quest" src="https://www.youtube.com/embed/sHU0h0tX1WU" allowfullscreen></iframe>
-        </article>
-        <article class="project-card project-card--video">
-          <div class="project-card__copy">
-            <span>Sistema</span>
-            <h3>Agendamento de Consultas e Exames</h3>
-            <p>Sistema de agendamento integrado com operação clínica, busca por unidade e administração de equipe.</p>
-          </div>
-          <iframe title="Sistema de Agendamento" src="https://www.youtube.com/embed/xXxW4eaTHfI" allowfullscreen></iframe>
-        </article>
-        <article class="project-card">
-          <div class="project-card__copy">
-            <span>Mapa interativo</span>
-            <h3>Uso de Redes Móveis com Big Data</h3>
-            <p>Visualização geográfica de uso de redes móveis com filtros temporais e análise de padrões regionais.</p>
-          </div>
-          <iframe title="Mapa de uso de redes móveis" src="projects/mapa.html"></iframe>
-        </article>
+    <section id="projects" class="section projects-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2 class="section-title"><span>&lt;</span>Projetos<span>/&gt;</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-preview"><iframe title="Análise de Clínicas Médicas" src="https://app.powerbi.com/view?r=eyJrIjoiZGIxYmM4NzUtNWNmMi00NDY2LThkZTYtMzA0NDU4NzM3M2ZkIiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe></div>
+            <div class="project-content">
+              <span>Dashboard</span>
+              <h3>Análise de Clínicas Médicas</h3>
+              <p>Performance por unidade, tendências, previsão de volume, horários de pico e tipos de demanda.</p>
+              <div class="tags"><span>Power BI</span><span>Saúde</span><span>Forecast</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"><iframe title="NPL Empresarial" src="https://app.powerbi.com/view?r=eyJrIjoiMmY2OGNmM2EtZDQ2Ny00NGE2LWJlYTAtZmE1YTgyYTllNDU2IiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe></div>
+            <div class="project-content">
+              <span>Dashboard</span>
+              <h3>Análise de NPL Empresarial</h3>
+              <p>Tendências de feedbacks, categorias recorrentes e fatores que influenciam avaliações.</p>
+              <div class="tags"><span>Power BI</span><span>NPS</span><span>Negócio</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"><iframe title="Setor de Despachante" src="https://app.powerbi.com/view?r=eyJrIjoiNzg0MTljYzEtZDFkNS00MzZlLWE5MzgtZDUzZjE0MTc4ODI5IiwidCI6Ijc0OTk0ZWJmLTcwOGYtNDFhZS04ZmQxLWNmMzUyYmE5OTEzNSJ9" allowfullscreen></iframe></div>
+            <div class="project-content">
+              <span>Dashboard</span>
+              <h3>Setor de Despachante</h3>
+              <p>Status, regiões, tipo de cliente, gargalos operacionais e tempo médio de conclusão.</p>
+              <div class="tags"><span>Power BI</span><span>Operação</span><span>SLA</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"><iframe title="Sea Quest" src="https://www.youtube.com/embed/sHU0h0tX1WU" allowfullscreen></iframe></div>
+            <div class="project-content">
+              <span>Produto</span>
+              <h3>Sea Quest</h3>
+              <p>Plataforma gamificada para incentivar limpeza, educação ambiental e conservação de praias.</p>
+              <div class="tags"><span>Produto</span><span>Gamificação</span><span>Impacto</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"><iframe title="Sistema de Agendamento" src="https://www.youtube.com/embed/xXxW4eaTHfI" allowfullscreen></iframe></div>
+            <div class="project-content">
+              <span>Sistema</span>
+              <h3>Agendamento de Consultas e Exames</h3>
+              <p>Sistema integrado para operação clínica, busca por unidade e administração de equipe.</p>
+              <div class="tags"><span>Python</span><span>Agenda</span><span>Clínica</span></div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview"><iframe title="Mapa de uso de redes móveis" src="projects/mapa.html"></iframe></div>
+            <div class="project-content">
+              <span>Mapa</span>
+              <h3>Redes Móveis com Big Data</h3>
+              <p>Visualização geográfica de uso de redes móveis com filtros temporais e padrões regionais.</p>
+              <div class="tags"><span>Mapa</span><span>Big Data</span><span>Python</span></div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contato" class="contact">
-      <div>
-        <p class="section-label">Contato</p>
-        <h2>Vamos conversar sobre dados?</h2>
-        <p>Disponível para oportunidades em BI, analytics, automação e produtos orientados a dados.</p>
-      </div>
-      <div class="contact__links">
-        <a href="mailto:gustavoallify@gmail.com">gustavoallify@gmail.com</a>
-        <a href="https://www.linkedin.com/in/gustavo-allify/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://github.com/JackCaolho" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://wa.me/5511974877301?text=Ol%C3%A1%20Gustavo,%20vi%20seu%20portfolio%20e%20gostaria%20de%20conversar." target="_blank" rel="noreferrer">WhatsApp</a>
+    <section id="contact" class="section contact-section">
+      <div class="section-container">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <h2 class="section-title"><span>&lt;</span>Contato<span>/&gt;</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="contact-content">
+          <div class="contact-info">
+            <a class="contact-item" href="mailto:gustavoallify@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <div><span>Email</span><strong>gustavoallify@gmail.com</strong></div>
+            </a>
+            <a class="contact-item" href="https://www.linkedin.com/in/gustavo-allify/" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <div><span>LinkedIn</span><strong>gustavo-allify</strong></div>
+            </a>
+            <a class="contact-item" href="https://github.com/JackCaolho" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <div><span>GitHub</span><strong>JackCaolho</strong></div>
+            </a>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <input name="name" type="text" placeholder="Seu nome" required>
+            <input name="email" type="email" placeholder="Seu email" required>
+            <input name="subject" type="text" placeholder="Assunto" required>
+            <textarea name="message" rows="5" placeholder="Mensagem" required></textarea>
+            <button class="btn btn-primary" type="submit">Enviar mensagem <i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>Gustavo Allify</span>
-    <span>Portfolio publicado com GitHub Pages</span>
+  <footer class="main-footer">
+    <div class="section-container footer-content">
+      <p>© 2026 Gustavo Allify | Portfolio em GitHub Pages</p>
+      <a href="#home">voltar ao topo</a>
+    </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
