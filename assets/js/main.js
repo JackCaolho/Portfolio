@@ -102,6 +102,118 @@ if (particles) {
   }
 }
 
+const projectImageExtensions = ["png", "jpg", "jpeg", "webp"];
+const projectImageLimit = 10;
+
+function findProjectImage(folder, index) {
+  const padded = String(index).padStart(2, "0");
+
+  return new Promise((resolve) => {
+    let extensionIndex = 0;
+
+    const tryNextExtension = () => {
+      if (extensionIndex >= projectImageExtensions.length) {
+        resolve(null);
+        return;
+      }
+
+      const extension = projectImageExtensions[extensionIndex];
+      const src = `assets/projects/${folder}/${padded}.${extension}`;
+      const image = new Image();
+
+      image.onload = () => resolve(src);
+      image.onerror = () => {
+        extensionIndex += 1;
+        tryNextExtension();
+      };
+      image.src = src;
+    };
+
+    tryNextExtension();
+  });
+}
+
+async function loadProjectImages(folder) {
+  const attempts = [];
+
+  for (let index = 1; index <= projectImageLimit; index += 1) {
+    attempts.push(findProjectImage(folder, index));
+  }
+
+  const results = await Promise.all(attempts);
+  return results.filter(Boolean);
+}
+
+function renderProjectCarousel(carousel, images) {
+  const title = carousel.dataset.title || "Projeto";
+  let currentIndex = 0;
+
+  carousel.innerHTML = `
+    <div class="carousel-stage"></div>
+    <div class="carousel-controls">
+      <button class="carousel-btn" type="button" aria-label="Imagem anterior">‹</button>
+      <div class="carousel-dots" aria-label="Navegação das imagens"></div>
+      <button class="carousel-btn" type="button" aria-label="Próxima imagem">›</button>
+    </div>
+  `;
+
+  const stage = carousel.querySelector(".carousel-stage");
+  const dots = carousel.querySelector(".carousel-dots");
+  const buttons = carousel.querySelectorAll(".carousel-btn");
+
+  if (!images.length) {
+    stage.innerHTML = `
+      <div class="carousel-placeholder">
+        <span>
+          <strong>${title}</strong>
+          Adicione imagens em assets/projects/${carousel.dataset.project}/ usando 01.png, 02.png, 03.png...
+        </span>
+      </div>
+    `;
+    buttons.forEach((button) => button.setAttribute("disabled", "true"));
+    return;
+  }
+
+  const updateCarousel = () => {
+    stage.innerHTML = `<img src="${images[currentIndex]}" alt="${title} - imagem ${currentIndex + 1}">`;
+    dots.querySelectorAll(".carousel-dot").forEach((dot, index) => {
+      dot.classList.toggle("is-active", index === currentIndex);
+    });
+  };
+
+  images.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.className = "carousel-dot";
+    dot.type = "button";
+    dot.setAttribute("aria-label", `Ver imagem ${index + 1}`);
+    dot.addEventListener("click", () => {
+      currentIndex = index;
+      updateCarousel();
+    });
+    dots.appendChild(dot);
+  });
+
+  buttons[0].addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+
+  buttons[1].addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+  });
+
+  updateCarousel();
+}
+
+document.querySelectorAll(".project-carousel").forEach(async (carousel) => {
+  const folder = carousel.dataset.project;
+  if (!folder) return;
+
+  const images = await loadProjectImages(folder);
+  renderProjectCarousel(carousel, images);
+});
+
 document.getElementById("contactForm")?.addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
