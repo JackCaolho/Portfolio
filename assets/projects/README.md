@@ -14,5 +14,5 @@ Pastas disponíveis:
 - `npl-empresarial`
 - `setor-despachante`
 - `sea-quest`
-- `agendamento-consultas`
+- `agendamento-consultas` - usado agora para o projeto de análise de passageiros por ponto
 - `redes-moveis`
