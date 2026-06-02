@@ -46,7 +46,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
 
 sections.forEach((section) => sectionObserver.observe(section));
 
-const revealTargets = document.querySelectorAll(".section-header, .card-panel, .stat-item, .skill-category, .timeline-item, .project-card, .contact-item, .contact-form");
+const revealTargets = document.querySelectorAll(".section-header, .card-panel, .skill-category, .timeline-item, .project-card, .contact-item, .contact-form");
 revealTargets.forEach((target) => target.classList.add("reveal"));
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -86,29 +86,6 @@ const skillObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.45 });
 
 document.querySelectorAll(".skill-item").forEach((item) => skillObserver.observe(item));
-
-document.querySelectorAll(".stat-item strong[data-count]").forEach((stat) => {
-  const target = Number(stat.dataset.count || 0);
-  const statObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      let value = 0;
-      const counter = window.setInterval(() => {
-        value += Math.max(1, Math.ceil(target / 28));
-        if (value >= target) {
-          value = target;
-          window.clearInterval(counter);
-        }
-        stat.textContent = target === 100 ? `${value}%` : String(value);
-      }, 38);
-
-      statObserver.unobserve(stat);
-    });
-  }, { threshold: 0.55 });
-
-  statObserver.observe(stat);
-});
 
 const particles = document.getElementById("particles");
 const symbols = ["SQL", "BI", "ETL", "KPI", "API", "DAX", "CSV", "DW", "SLA", "HOP"];
