@@ -13,6 +13,6 @@ Pastas disponíveis:
 - `clinicas-medicas`
 - `plataforma-agendamento`
 - `ia-manutencao-preditiva`
-- `sea-quest`
+- `ia-qualidade-sono`
 - `agendamento-consultas` - usado agora para o projeto de análise de passageiros por ponto
 - `redes-moveis`
