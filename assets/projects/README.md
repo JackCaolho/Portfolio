@@ -16,3 +16,5 @@ Pastas disponíveis:
 - `ia-qualidade-sono`
 - `agendamento-consultas` - usado agora para o projeto de análise de passageiros por ponto
 - `redes-moveis`
+- `dashboard-governanca-bi`
+- `dashboard-performance-operacional`
