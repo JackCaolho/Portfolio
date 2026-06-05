@@ -12,7 +12,7 @@ Pastas disponíveis:
 
 - `clinicas-medicas`
 - `plataforma-agendamento`
-- `setor-despachante`
+- `ia-manutencao-preditiva`
 - `sea-quest`
 - `agendamento-consultas` - usado agora para o projeto de análise de passageiros por ponto
 - `redes-moveis`
