@@ -672,7 +672,7 @@ iframe {
 }
 
 .project-preview {
-  height: 430px;
+  height: clamp(320px, 46vw, 560px);
   background: var(--bg-deep);
   border-bottom: 2px solid var(--line);
 }
@@ -686,7 +686,10 @@ iframe {
 
 .carousel-stage {
   position: relative;
+  display: grid;
+  place-items: center;
   min-height: 0;
+  padding: 12px;
   background:
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
@@ -698,7 +701,8 @@ iframe {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .carousel-placeholder {
@@ -951,7 +955,7 @@ iframe {
   }
 
   .project-preview {
-    height: 260px;
+    height: clamp(230px, 64vw, 360px);
   }
 
   .footer-content {
