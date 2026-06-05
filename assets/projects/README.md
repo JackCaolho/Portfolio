@@ -11,7 +11,7 @@ O carrossel também tenta carregar `jpg`, `jpeg` e `webp`.
 Pastas disponíveis:
 
 - `clinicas-medicas`
-- `npl-empresarial`
+- `plataforma-agendamento`
 - `setor-despachante`
 - `sea-quest`
 - `agendamento-consultas` - usado agora para o projeto de análise de passageiros por ponto
