@@ -663,8 +663,8 @@ iframe {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 34px;
 }
 
 .project-card {
@@ -672,7 +672,7 @@ iframe {
 }
 
 .project-preview {
-  height: 310px;
+  height: 430px;
   background: var(--bg-deep);
   border-bottom: 2px solid var(--line);
 }
@@ -771,7 +771,7 @@ iframe {
 }
 
 .project-content {
-  padding: 24px;
+  padding: 30px;
 }
 
 .project-content h3 {
